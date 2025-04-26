@@ -77,7 +77,13 @@
         color: black;
         transition: ease-in-out 1s;
     }
+
+    & div {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
 
 .message{
     &{
@@ -103,6 +109,15 @@
         align-self: flex-end;
         background-color: rgba(31, 31, 31, 0.863);
         color: white;
+    }
+
+    &.success{
+        background-color: rgb(204, 233, 204);
+        color: green;
+    }
+    &.error{
+        background-color: rgb(238, 209, 209);
+        color: red;
     }
 }
 
