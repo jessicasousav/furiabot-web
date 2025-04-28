@@ -1,6 +1,9 @@
 import React, { use, useEffect, useRef } from "react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
+
 import logo from '../../assets/furia_whitelogo.png'
+import '../../styles/bot.css'
 
 export default function Bot(){
 
@@ -305,6 +308,9 @@ export default function Bot(){
 
                 <strong>modo FURIOSÍSSIMO 🔥</strong>
                 <p>você não está preparado para o que irá ver!</p>
+            </div>
+            <div className='box-back'>
+                <Link className='box-link' to='/'>Voltar</Link>
             </div>
         </div>
     )
