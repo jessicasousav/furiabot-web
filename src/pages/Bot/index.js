@@ -312,6 +312,10 @@ export default function Bot(){
             <div className='box-back'>
                 <Link className='box-link' to='/'>Voltar</Link>
             </div>
+
+            <footer>
+                © 2025 FuriaBOT. Criado por Jéssica de Sousa Vieira para teste da FURIA ESPOST.
+            </footer>
         </div>
     )
 }

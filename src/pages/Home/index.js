@@ -36,7 +36,7 @@ export default function Home(){
                     <Link to='/chat' className='content-link'>
                         Clique aqui e bora conversar um pouquinho!
                     </Link>
-                    <p>Te espero lá viu, guerreiro?!</p>
+                    <p>Te espero lá viu, guerreiro(a)?!</p>
                 </div>
             </div>
 

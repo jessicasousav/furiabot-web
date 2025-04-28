@@ -1,0 +1,136 @@
+@media screen and (max-width: 600px) {
+    /* HOMEPAGE */
+    .home-content{
+        margin: 0px 30px;
+    }
+
+    .home-content{
+        & h2{
+            font-size: 1.4rem;
+        }
+        & h3{
+            font-size: 1rem;
+        }
+    }
+
+    .content-messages{
+        & h4{
+            margin: 0px 10px;
+            font-size: .95rem;
+        }
+
+        & .content-link{
+            width: 17rem;
+            height: 8ch;
+            font-size: .9rem;
+        }
+
+        & p{
+            font-size: 13px;
+        }
+    }
+
+    .home-botface{
+        & img{
+            height: 170px;
+        }
+    }
+
+    /* CHATBOT ARRUMAR */
+    .box-title{
+        & {
+        height: 7ch;
+        width: 75vw;
+        }
+        & .title{
+            height: 2.7ch;
+            padding-top: 5px;
+        }
+        & h1{
+            font-size: 22px;
+        }
+        & .logo{
+            height: 25px;
+            margin-right: 3px;
+        }
+    }
+
+    .box-info{
+        display: none;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 768px){
+
+.home-content{
+    & h2{
+        font-size: 1.3rem;
+    }
+    & h3{
+        font-size: 1rem;
+    }
+}
+
+.content-messages{
+    & h4{
+        font-size: .95rem;
+        margin: 0px 40px;
+    }
+    & .content-link{
+        width: 21rem;
+        height: 3.7ch;
+        font-size: 1.6ch;
+    }
+    & p{
+        font-size: 14px;
+    }
+}
+
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape){
+
+    .home-content{
+        &{
+            margin-left: 170px;
+            margin-right: 20px;
+            height: calc(100vh - 80px - 30px);
+        }
+        & h3{
+            margin-bottom: 15px;
+        }
+    }
+
+    .home-botface img{
+        position: absolute;
+        height: 170px;
+        left: 15%;
+        top: 60%;
+        transform: translate(-60%, -55%);
+    }
+
+    .content-title{
+        width: 450px;
+    }
+
+    .content-messages{
+        & h4{
+            margin: 0 40px;
+        }
+        & .content-link{
+            margin-top: 10px; 
+        }
+    }
+
+    footer{
+    & {
+        font-size: 13px;
+        padding-top: 5px;
+    }
+}
+}

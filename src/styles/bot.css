@@ -220,3 +220,10 @@
 .box-back:hover{
     background-color: rgb(31, 31, 31);
 }
+
+footer{
+    & {
+        position: absolute;
+        bottom: 10px;        
+    }
+}
