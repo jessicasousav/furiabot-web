@@ -67,7 +67,7 @@ export default function Bot(){
         // Comandos aceitos pelo chatbot
         const options = [
             {
-                option: ['oi', 'tudo bem'],
+                option: ['oi', 'tudo bem', 'ola'],
                 answer: 'Tudo bem, guerreiro(a)? Espero que esteja tendo um bom dia como eu! Em que posso te ajudar hoje?',
             },
             {

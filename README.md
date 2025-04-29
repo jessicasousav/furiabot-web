@@ -21,6 +21,32 @@ FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos 
 - Informativo sobre a FURIA
 - Design claro e direto
 
+### O que pergutar ao FuriaBOT
+Com o sistema de ativação por meio de palavras-chave, o usuário pode escrever frases inteiras ou apenas uma palavra específica para o bot responder.
+
+**Palavras de ativação:**
+- **oi, tudo bem, ola:** Retorna uma saudação ao usuário.
+- **paz, estou bem:** Retorna uma resposta à saudação do usuário.
+- **jogo, quando, onde, dropa:**
+Retorna um link com informações sobre jogos da Furia.
+- **noticia, informa:** Retorna um link com informações e notícias sobre a Furia.
+- **duvida, pergunta, sim:** Retorna uma resposta para ajudar o usuário com o que pode ser respondido pelo bot.
+- **roupa, vest, camis, moda, merchandise:** Retorna um link para a loja oficial da Furia.
+- **arm:** Retorna as armas mais utilizadas pelos jogadores no CS.
+- **contato, whats, wpp:** Retorna o link para o WhatsApp oficial da Furia.
+- **quiz:** Dá inicio ao quiz com 3 perguntas aleatórias sobre a Furia.
+- **não, obrigado, valeu, ok, parar, nada:** Retorna uma despedida e agradecimento ao usuário.
+
+**Exemplo:**
+
+<kbd>**Usuário: Oi, chat!** </kbd>
+
+<kbd> *FuriaBOT: saudação* </kbd>
+
+<kbd> **Usuário: Vamos fazer o quiz!** </kbd>
+
+<kbd> *FuriaBOT: chamada e inicio do quiz* </kbd>
+
 ## Design
 
 O design do FuriaBOT foi projetado a partir das cores da logo da FURIA Esports. Com sua pateta monocromática, seu visual mantém a identidade da marca sem perder a legibilidade e seu impacto visual.
