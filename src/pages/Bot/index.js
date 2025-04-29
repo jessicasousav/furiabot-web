@@ -89,7 +89,7 @@ export default function Bot(){
                 answer: 'Me fala qual a sua dúvida, estarei tentando te ajudar da melhor forma que consigo. Se quer saber mais sobre os jogos ou jogadores, me manda um "dropa".',
             },
             {
-                option: ['nao', 'não', 'obrigad', 'valeu', 'ok', 'parar', 'nada'],
+                option: ['nao', 'não', 'obrigad', 'valeu', 'ok', 'parar', 'nada', 'tchau'],
                 answer: 'Valeu por passar aqui pra falar comigo, qualquer outra dúvida é so chamar!',
             },
             {

@@ -35,7 +35,7 @@ Retorna um link com informações sobre jogos da Furia.
 - **arm:** Retorna as armas mais utilizadas pelos jogadores no CS.
 - **contato, whats, wpp:** Retorna o link para o WhatsApp oficial da Furia.
 - **quiz:** Dá inicio ao quiz com 3 perguntas aleatórias sobre a Furia.
-- **não, obrigado, valeu, ok, parar, nada:** Retorna uma despedida e agradecimento ao usuário.
+- **não, obrigado, valeu, ok, parar, nada, tchau:** Retorna uma despedida e agradecimento ao usuário.
 
 **Exemplo:**
 
