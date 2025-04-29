@@ -30,7 +30,7 @@ Pensando no conforto do usuário, o FuriaBOT possui dois layouts, sendo um para 
 
 ####
 
-<img src="./src/assets/screenshot_desktop.png" height="300"><img src="./src/assets/screenshot_mobile.png" height="300">
+<img src="./src/assets/screenshot_desktop.png" height="320"><img src="./src/assets/screenshot_mobile.png" height="320">
 
 ## Como rodar localmente
 
