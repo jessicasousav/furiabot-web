@@ -68,7 +68,7 @@ export default function Bot(){
         const options = [
             {
                 option: ['oi', 'tudo bem'],
-                answer: 'Tudo bem, furioso(a)? Espero que esteja tendo um bom dia como eu! Em que posso te ajudar hoje?',
+                answer: 'Tudo bem, guerreiro(a)? Espero que esteja tendo um bom dia como eu! Em que posso te ajudar hoje?',
             },
             {
                 option: ['paz', 'estou bem'],

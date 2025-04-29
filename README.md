@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# FuriaBOT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jessicasousav/Moovy/blob/main/LICENSE)
 
-## Available Scripts
+FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos fãs da equipe de CS da **FURIA Esports**. Com uma interface moderna e inspirada na identidade visual da FURIA, o bot traz interações divertidas, quiz termático e informações sobre o time e sobre a marca.
 
-In the project directory, you can run:
+![FURIABOT Screenshot](./src/assets/screenshot_home.png)
 
-### `npm start`
+## Tecnologias
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React.js
+- HTML5 + CSS3
+- Javascript
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Funcionalidades
 
-### `npm test`
+- Interface responsiva
+- Identidade visual inspirada na FURIA
+- Conversação confortável e amigável para com o usuário
+- Quiz sobre o time
+- Informativo sobre a FURIA
+- Design claro e direto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Design
 
-### `npm run build`
+O design do FuriaBOT foi projetado a partir das cores da logo da FURIA Esports. Com sua pateta monocromática, seu visual mantém a identidade da marca sem perder a legibilidade e seu impacto visual.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Responsividade
+Pensando no conforto do usuário, o FuriaBOT possui dois layouts, sendo um para telas pequenas como celulares e outro para telas maiores como Tablets e Desktops. Conforme as imagens a seguir, a versão desktop/tablets traz um design clean, enquanto a versão mobile traz um visual dark.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+####
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="./src/assets/screenshot_desktop.png" height="320">
+<img src="./src/assets/screenshot_mobile.png" height="320">
 
-### `npm run eject`
+## Como rodar localmente
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone o repositorio:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```git clone https://github.com/jessicasousav/furiabot-web```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Entre na pasta clonada
+    
+    ```cd furiabot-web```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Inicie o projeto
 
-## Learn More
+    ```npm start```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Como acessar o deploy
+Acesse em https://jessicasousav.github.io/furiabot
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Autor
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Projeto desenvolvido por [Jéssica de Sousa Vieira](http://linkedin.com/in/jessica-sousa-vieira) com fins educacionais e teste de habilidades. Não afiliado oficialmente à FURIA Esports. 
