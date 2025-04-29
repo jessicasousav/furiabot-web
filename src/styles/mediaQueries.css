@@ -1,5 +1,5 @@
+/* HOMEPAGE */
 @media screen and (max-width: 600px) {
-    /* HOMEPAGE */
     .home-content{
         margin: 0px 30px;
     }
@@ -36,29 +36,6 @@
         }
     }
 
-    /* CHATBOT ARRUMAR */
-    .box-title{
-        & {
-        height: 7ch;
-        width: 75vw;
-        }
-        & .title{
-            height: 2.7ch;
-            padding-top: 5px;
-        }
-        & h1{
-            font-size: 22px;
-        }
-        & .logo{
-            height: 25px;
-            margin-right: 3px;
-        }
-    }
-
-    .box-info{
-        display: none;
-    }
-
     footer{
         font-size: 10px;
     }
@@ -93,8 +70,105 @@
 
 }
 
+/* CHATBOT */
+@media screen and (max-width: 600px), screen and (max-height: 600px) and (orientation: landscape) {
+    .container{
+        background-color: rgb(12, 12, 12);
+    }
+    .box-title{
+        & {
+        background-color: rgb(22, 22, 22);
+        height: 7ch;
+        width: 75vw;
+        border-radius: 15px 15px 0px 0px;
+        border: 1px solid rgba(255, 255, 255, 0.400);
+        }
+        & .title{
+            height: 2.7ch;
+            padding-top: 5px;
+        }
+        & h1{
+            font-size: 22px;
+        }
+        & .logo{
+            height: 25px;
+            margin-right: 3px;
+        }
+    }
+
+    .box-chat{
+        background-color: rgb(22, 22, 22);
+        width: 75vw;
+        padding: 30px;
+        height: 55vh;
+        border: 1px solid rgba(255, 255, 255, 0.400);
+    }
+
+    .message{
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+        padding: 8px 12px;
+        &.bot{
+            background-color: rgb(7, 7, 7);
+            color: rgba(255, 255, 255, 0.774);
+        }
+        &.user{
+            background-color: rgb(31, 31, 31);
+            color: rgba(255, 255, 255, 0.774);
+        }
+    }
+
+    .box-user{
+        border: 1px solid rgba(255, 255, 255, 0.400);
+        border-radius: 0px 0px 15px 15px;
+        width: 75vw;
+        background-color: rgb(22, 22, 22);
+        padding: 0px 30px;
+        margin: 1px 0px;
+        & input {
+            width: 75vw;
+            color: rgb(230, 230, 230);
+        }
+        & button{
+            height: 35px;
+            width: 40px;
+            background-color: rgb(230, 230, 230);
+            color: rgb(22, 22, 22);
+        }
+        & button:hover{
+            color: rgb(7, 7, 7);
+            transform: scale(1) rotate(-40deg);
+        }
+    }
+
+    .box-info{
+        display: none;
+    }
+
+    .box-back{
+        position: absolute;
+        top: 5px;
+        cursor: pointer;
+        & .box-link{
+            background-color: rgba(46, 46, 46, 0.822);
+            height: 30px;
+            width: 40px;
+        }
+        & span{
+            font-size: 15px;
+        }
+    }
+
+    .box-link:hover{
+        background-color: rgb(65, 65, 65);
+    }
+}
+
 @media screen and (max-height: 600px) and (orientation: landscape){
 
+    /* HOMEPAGE */
     .home-content{
         &{
             margin-left: 170px;
@@ -127,10 +201,32 @@
         }
     }
 
+    /* CHATBOT */
+    .box-chat{
+        height: 35vh;
+    }
+
+    .box-user{
+        height: 4ch;
+        & button{
+            height: 30px;
+            width: 35px;
+        }
+    }
+
+    .box-back{
+        top: auto;
+        left: 7px;
+    }
+
     footer{
     & {
+        border-top: 1px solid rgba(146, 146, 146, 0.377);
+        width: 100vw;
+        color: rgba(146, 146, 146, 0.377);
         font-size: 13px;
-        padding-top: 5px;
+        padding-top: 2px;
+        bottom: 2px;     
+        }
     }
-}
 }

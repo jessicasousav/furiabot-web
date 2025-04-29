@@ -310,7 +310,7 @@ export default function Bot(){
                 <p>você não está preparado para o que irá ver!</p>
             </div>
             <div className='box-back'>
-                <Link className='box-link' to='/'>Voltar</Link>
+                <Link className='box-link' to='/'><span class="material-symbols-outlined">arrow_back</span></Link>
             </div>
 
             <footer>
