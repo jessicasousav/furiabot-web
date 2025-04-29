@@ -102,6 +102,12 @@
         padding: 30px;
         height: 55vh;
         border: 1px solid rgba(255, 255, 255, 0.400);
+        & a{
+            color: rgba(255, 255, 255, 0.774);
+        }
+        & a:hover{
+            color: white;
+        }
     }
 
     .message{
@@ -117,6 +123,14 @@
         &.user{
             background-color: rgb(31, 31, 31);
             color: rgba(255, 255, 255, 0.774);
+        }
+        &.success{
+            background-color: rgb(204, 233, 204);
+            color: green;
+        }
+        &.error{
+            background-color: rgb(238, 209, 209);
+            color: red;
         }
     }
 
@@ -143,8 +157,17 @@
         }
     }
 
+    .btn-help{
+        background-color: transparent;
+        border: none;
+        color: rgb(230, 230, 230);
+        margin-top: 15px;
+    }
+
     .box-info{
-        display: none;
+        background-color: white;
+        position: absolute;
+        bottom: 200px;
     }
 
     .box-back{

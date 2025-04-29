@@ -2,10 +2,14 @@ import React, { use, useEffect, useRef } from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
-import logo from '../../assets/furia_whitelogo.png'
-import '../../styles/bot.css'
+import logo from '../../assets/furia_whitelogo.png';
+import botface from '../../assets/furia_botface.png';
+import '../../styles/bot.css';
 
 export default function Bot(){
+
+    const[showInstructions, setShowInstructions] = useState(false);
+    const[isMobile, setIsMobile] = useState(false);
 
     const[userInput, setUserInput] = useState('');
     const[chatHistory, setChatHistory] = useState([
@@ -26,6 +30,26 @@ export default function Bot(){
     useEffect(() => {
         endOfMessagesRef.current?.scrollIntoView();
     }, [chatHistory])
+
+    // Verificando se o dispositivo é um celular
+    useEffect(() => {
+        const handleResize = () => {
+            const mobile = window.innerWidth <= 600;
+            setIsMobile(mobile);
+            setShowInstructions(!mobile);
+        }
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const toggleInstructions = () => {
+        if(isMobile){
+            setShowInstructions((prev) => !prev)
+        }
+    }
 
     // Função de esperar(tempo)
     function wait(ms){
@@ -251,6 +275,7 @@ export default function Bot(){
     }
 
 
+
     return(
         <div className="container">
             <div className="box-title">
@@ -299,7 +324,12 @@ export default function Bot(){
                 <button onClick={handleSubmit}><span className="material-symbols-outlined">send</span></button>
 
             </div>
-            <div className="box-info">
+            {isMobile && (
+                <button className="btn-help"><span class="material-symbols-outlined" id="help" onClick={toggleInstructions}>help</span></button>
+            )}
+
+            {showInstructions && (
+                <div className="box-info" id="helpItens">
                 <strong>dúvida?</strong>
                 <p>me pergunte algo, darei o meu máximo para ajudar</p>
 
@@ -309,6 +339,7 @@ export default function Bot(){
                 <strong>modo FURIOSÍSSIMO 🔥</strong>
                 <p>você não está preparado para o que irá ver!</p>
             </div>
+            )}
             <div className='box-back'>
                 <Link className='box-link' to='/'><span class="material-symbols-outlined">arrow_back</span></Link>
             </div>
