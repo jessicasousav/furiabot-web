@@ -80,6 +80,11 @@ export default function Bot(){
                 link: 'https://draft5.gg/equipe/330-FURIA',
             },
             {
+                option: ['noticia', 'informa'],
+                answer: 'Para encontrar mais informações e notícias sobre a FURIA:',
+                link: 'https://themove.gg/esports/cs',
+            },
+            {
                 option: ['duvida', 'pergunta', 'sim'],
                 answer: 'Me fala qual a sua dúvida, estarei tentando te ajudar da melhor forma que consigo. Se quer saber mais sobre os jogos ou jogadores, me manda um "dropa".',
             },
