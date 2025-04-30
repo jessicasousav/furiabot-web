@@ -41,7 +41,7 @@ export default function Home(){
             </div>
 
             <footer>
-                © 2025 FuriaBOT. Criado por Jéssica de Sousa Vieira para teste da FURIA ESPOST.
+                <div>© 2025 FuriaBOT. Criado por <a href="https://linkedin.com/in/jessica-sousa-vieira" target="blank"> Jéssica de Sousa Vieira </a> para teste da FURIA ESPORTS.</div>
             </footer>
         </div>
     )

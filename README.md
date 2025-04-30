@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/jessicasousav/Moovy/blob/main/LICENSE)
 
-FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos fãs da equipe de CS da **FURIA Esports**. Com uma interface moderna e inspirada na identidade visual da FURIA, o bot traz interações divertidas, quiz termático e informações sobre o time e sobre a marca.
+FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos fãs da equipe de CS da **FURIA Esports**. Com uma interface moderna e inspirada na identidade visual da FURIA, o bot proporciona interações divertidas, quiz temático e informações sobre o time e a marca.
 
 ![FURIABOT Screenshot](./src/assets/screenshot_home.png)
 
@@ -16,27 +16,27 @@ FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos 
 
 - Interface responsiva
 - Identidade visual inspirada na FURIA
-- Conversação confortável e amigável para com o usuário
+- Conversação amigável com o usuário
 - Quiz sobre o time
-- Informativo sobre a FURIA
-- Design claro e direto
+- Informatições sobre a FURIA
+- Design claro e objetivo
 
-### O que pergutar ao FuriaBOT
-Com o sistema de ativação por meio de palavras-chave, o usuário pode escrever frases inteiras ou apenas uma palavra específica para o bot responder.
+### O que perguntar ao FuriaBOT
+Com o sistema de ativação por palavras-chave, o usuário pode escrever frases completas ou apenas palavras específicas para receber respostas do bot.
 
 **Palavras de ativação:**
 - **oi, tudo bem, olá:** Retorna uma saudação ao usuário.
 - **paz, estou bem:** Retorna uma resposta à saudação do usuário.
 - **jogo, quando, onde, dropa:**
 Retorna um link com informações sobre jogos da Furia.
-- **notícia, informa...:** Retorna um link com informações e notícias sobre a Furia.
-- **dúvida, pergunta, sim:** Retorna uma resposta para ajudar o usuário com o que pode ser respondido pelo bot.
-- **roupa, vest..., camis..., moda, merchandise:** Retorna um link para a loja oficial da Furia.
-- **arm...:** Retorna as armas mais utilizadas pelos jogadores no CS.
+- **notícia, informa...:** Retorna um link com notícias atualizadas sobre a Furia.
+- **dúvida, pergunta, sim:** Retorna sugestões de perguntas ao bot.
+- **roupa, vest..., camis..., moda, merchandise:** Retorna um link para a loja oficial.
+- **arm...:** Retorna as armas populares pelos jogadores no CS.
 - **contato, whats, wpp:** Retorna o link para o WhatsApp oficial da Furia.
 - **quiz:** Dá inicio ao quiz com 3 perguntas aleatórias sobre a Furia.
-- **não, obrigado, valeu, ok, parar, nada, tchau:** Retorna uma despedida e agradecimento ao usuário.
-- **furios...**: Retorna o Modo Furioso.
+- **não, obrigado, valeu, ok, parar, nada, tchau:** Retorna uma despedida ao usuário.
+- **furios...**: Ativa o *Modo Furioso* com estética diferenciada.
 
 **Exemplo:**
 
@@ -50,35 +50,42 @@ Retorna um link com informações sobre jogos da Furia.
 
 ## Design
 
-O design do FuriaBOT foi projetado a partir das cores da logo da FURIA Esports. Com sua pateta monocromática, seu visual mantém a identidade da marca sem perder a legibilidade e seu impacto visual.
+O design do FuriaBOT foi desenvolvido com base nas cores da identidade visual da FURIA Esports. Com sua paleta monocromática, o visual mantém a personalidade da marca sem perder legibilidade ou impacto visual.
 
 ### Responsividade
-Pensando no conforto do usuário, o FuriaBOT possui dois layouts, sendo um para telas pequenas como celulares e outro para telas maiores como Tablets e Desktops. Conforme as imagens a seguir, a versão desktop/tablets traz um design clean, enquanto a versão mobile traz um visual dark.
+Pensando no conforto do usuário, o FuriaBOT possui dois layouts: um para dispositivos móveis e outro para telas maiores como tablets e desktops. A versão desktop é mais clean, enquanto a versão mobile possui um visual dark.
 
 <p align="center">
 <kbd><img src="./src/assets/screenshot_desktop.png" height="320"></kbd><kbd><img src="./src/assets/screenshot_mobile.png" height="320"></kbd>
 </p>
 
 ### Modo Furioso
-No momento em que o usuário envia algo contendo a palavra **"furioso"**, o sistema muda a estética da interface, surpreendendo-o com um ambiente divertido. **Vale a pena testar!**
+Quando o usuário envia algo contendo a palavra **"furioso"**, o sistema ativa o *Modo Furioso*, alterando a estética da interface e criando uma experiência visual divertida. **Vale a pena testar!**
 
 ## Como rodar localmente
 
 1. Clone o repositorio:
 
-    ```git clone https://github.com/jessicasousav/furiabot-web```
+    ```bash
+    git clone https://github.com/jessicasousav/furiabot-web
+    ```
 
 2. Entre na pasta clonada
     
-    ```cd furiabot-web```
+    ```bash
+    cd furiabot-web
+    ```
 
 3. Inicie o projeto
 
-    ```npm start```
+    ```bash
+    npm start
+    ```
 
 ## Como acessar o deploy
-Acesse em https://jessicasousav.github.io/furiabot
+Acesse o projeto em:
+https://jessicasousav.github.io/furiabot
 
 ## Autor
 
-Projeto desenvolvido por [Jéssica de Sousa Vieira](http://linkedin.com/in/jessica-sousa-vieira) com fins educacionais e teste de habilidades. Não afiliado oficialmente à FURIA Esports. 
+Projeto desenvolvido por [Jéssica de Sousa Vieira](http://linkedin.com/in/jessica-sousa-vieira) com fins educacionais e para teste de habilidades. Não afiliado oficialmente à FURIA Esports. 

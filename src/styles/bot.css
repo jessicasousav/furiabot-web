@@ -257,4 +257,12 @@ footer{
         position: absolute;
         bottom: 10px;        
     }
+    & a{
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+    }
+    & a:hover{
+        color: rgba(46, 46, 46, 0.822);
+    }
 }

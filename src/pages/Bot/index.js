@@ -72,55 +72,55 @@ export default function Bot(){
         const options = [
             {
                 option: ['oi', 'tudo bem', 'ola', 'olá'],
-                answer: 'Tudo bem, guerreiro(a)? Espero que esteja tendo um bom dia como eu! Em que posso te ajudar hoje?',
+                answer: 'Tudo bem, guerreiro(a)? Espero que seu dia esteja tão bom quanto o meu! Como posso te ajudar hoje?',
             },
             {
                 option: ['paz', 'estou bem'],
-                answer: 'Que bom que está na paz de um jogo vencido! Em que posso te ajudar hoje?',
+                answer: 'Que bom que está na paz de um jogo vencido! Em que posso te ajudar agora?',
             },
             {
                 option: ['beleza', 'ok'],
-                answer: 'Precisa de ajuda em algo mais, guerreiro(a)?'
+                answer: 'Show! Precisa de ajuda com mais alguma coisa, guerreiro(a)?'
             },
             {
                 option: ['jog', 'quando', 'onde', 'dropa'],
-                answer: 'Para encontrar informações de jogos e jogadores: ',
+                answer: 'Quer saber sobre os jogos e jogadores da FURIA? Dá uma olhada aqui: ',
                 link: 'https://draft5.gg/equipe/330-FURIA',
             },
             {
                 option: ['noticia', 'notícia', 'informa'],
-                answer: 'Para encontrar mais informações e notícias sobre a FURIA:',
+                answer: 'Quer se manter informado sobre tudo da FURIA? Confere aqui:',
                 link: 'https://themove.gg/esports/cs',
             },
             {
                 option: ['duvida', 'dúvida', 'pergunta', 'sim', 'ajuda', 'furia'],
-                answer: 'Me fala qual a sua dúvida, estarei tentando te ajudar da melhor forma que consigo. Se quer saber mais sobre os jogos ou jogadores, me manda um "dropa".',
+                answer: 'Manda aí sua dúvida! Vou tentar ajudar da melhor forma possível. Se quiser saber mais sobre os jogos ou jogadores, é só mandar um "dropa".',
             },
             {
                 option: ['nao', 'não', 'obrigad', 'valeu', 'parar', 'nada', 'tchau'],
-                answer: 'Valeu por passar aqui pra falar comigo, qualquer outra dúvida é so chamar!',
+                answer: 'Valeu por trocar essa ideia comigo! Qualquer coisa, só chamar!',
             },
             {
                 option: ['roupa', 'vest', 'camis', 'moda', 'merchandise'],
-                answer: 'A linha de moda da FURIA é lindissima, vai lá dar uma conferida: ',
+                answer: 'A linha de moda da FURIA tá simplesmente insana! Confere lá:',
                 link: 'https://www.furia.gg',
             },
             {
                 option: ['arm'],
-                answer: 'Olha, falando de CS... tem muita arma ali que pode te fazer dar o seu nome, mas a "AK-47", as "M4A4/M4A1-S" e a "AWP" tem o coração de muitos jogadores!'
+                answer: 'Falando de CS... tem muita arma braba, mas a AK-47, M4A4/M4A1-S e AWP são as queridinhas dos players!'
             },
             {
                 option: ['quiz'],
-                answer: 'Beleza! Vamos para o quiz, espero que esteja preparado(a)! Serão 3 perguntas e caso queira parar, é só dizer "parar".',
+                answer: 'Fechado! Bora pro quiz! Serão 3 perguntas sobre a FURIA. Se quiser parar, é só dizer "parar". Preparado(a)?',
             },
             {
                 option: ['contato', 'whats', 'wpp'],
-                answer: 'Opa! Se quiser entrar em contato ou saber mais sobre a FURIA, é só dar um oi lá no WhatsApp! Te espero lá ein guerreiro(a)!',
+                answer: 'Se quiser falar com a FURIA ou saber mais, manda um oi no WhatsApp! Te espero lá, guerreiro(a)!',
                 link: 'https://wa.me/5511993404466'
             },
             {
                 option: ['furios'],
-                answer: 'Você fez a melhor escolha! O Modo Furioso foi ativado!! Se quiser voltar ao modo normal, é só dizer "desativar", beleza?'
+                answer: 'Você fez a melhor escolha! 🔥 O Modo Furioso foi ativado! Quer voltar ao normal? Só mandar "desativar", beleza?'
             },
         ];
 
@@ -150,17 +150,17 @@ export default function Bot(){
 
         const furious = [
             'VAMO FURIAAAAAA!',
-            'Jogar bonito é fácil, quero ver jogar com FURIAAAA!',
-            'Na FURIA não existe adversário não. Só presa.',
-            'Smoke, flash e, quando você menos espera, uma fera te encontra!',
+            'Jogar bonito é fácil... quero ver é jogar com FURIAAAA!',
+            'Na FURIA não existe adversário. Só presa.',
+            'Smoke, flash... e quando você menos espera, uma fera te encontra!',
             'Não é questão de sorte, é questão de tática!',
-            'Porque um time é um time, mas a FURIA é uma legião deixando um legado!'
+            'Um time joga. A FURIA deixa legado. Somos legião!'
         ]
 
 
         // Alerta caso o usuário envie o campo de digitação vazio
         if(!userInput){
-            alert('Opa! Não consigo ouvir o que você está dizendo, poderia tentar novamente?')
+            alert('Opa! Parece que você não digitou nada. Tenta de novo aí!')
             return;
         }
 
@@ -244,7 +244,7 @@ export default function Bot(){
             // mensagem para avisar ao usuário que o quiz foi interrompido com sucesso
             const stopQuiz = [...chatHistory,
                 { from: 'user', text: userInput},
-                { from: 'bot', text: 'Beleza, quiz interrompido! Caso queira fazer novamente, é só dizer "quiz".'}
+                { from: 'bot', text: 'Tranquilo, o quiz foi interrompido! Se quiser jogar de novo, é só mandar um "quiz".'}
             ]
             setUserInput('');
             setChatHistory(stopQuiz);
@@ -314,7 +314,7 @@ export default function Bot(){
             setFuriousSteps(0);
             setChatHistory([...chatHistory,
                 {from: 'user', text: userInput},
-                {from: 'bot', text: 'Ok, dropando Modo Furioso! Se quiser reativá-lo é só dizer "furioso"'}
+                {from: 'bot', text: 'Ok, Modo Furioso desativado! Se quiser ativar de novo, é só mandar um "furioso"'}
             ]);
             setUserInput('');
             return;
@@ -393,7 +393,7 @@ export default function Bot(){
                     type="text"
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
-                    placeholder="Digite o que se passa na sua mente...."
+                    placeholder="Digite o que se passa na sua mente..."
                     onKeyDown={(e) => {if (e.key === 'Enter'){handleSubmit()}}}
                 />
 
@@ -421,7 +421,7 @@ export default function Bot(){
             </div>
 
             <footer>
-                © 2025 FuriaBOT. Criado por Jéssica de Sousa Vieira para teste da FURIA ESPOST.
+                <div>© 2025 FuriaBOT. Criado por <a href="https://linkedin.com/in/jessica-sousa-vieira" target="blank"> Jéssica de Sousa Vieira </a> para teste da FURIA ESPORTS.</div>
             </footer>
         </div>
     )
