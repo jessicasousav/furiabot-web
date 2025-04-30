@@ -25,17 +25,18 @@ FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos 
 Com o sistema de ativação por meio de palavras-chave, o usuário pode escrever frases inteiras ou apenas uma palavra específica para o bot responder.
 
 **Palavras de ativação:**
-- **oi, tudo bem, ola:** Retorna uma saudação ao usuário.
+- **oi, tudo bem, olá:** Retorna uma saudação ao usuário.
 - **paz, estou bem:** Retorna uma resposta à saudação do usuário.
 - **jogo, quando, onde, dropa:**
 Retorna um link com informações sobre jogos da Furia.
-- **noticia, informa:** Retorna um link com informações e notícias sobre a Furia.
-- **duvida, pergunta, sim:** Retorna uma resposta para ajudar o usuário com o que pode ser respondido pelo bot.
-- **roupa, vest, camis, moda, merchandise:** Retorna um link para a loja oficial da Furia.
-- **arm:** Retorna as armas mais utilizadas pelos jogadores no CS.
+- **notícia, informa...:** Retorna um link com informações e notícias sobre a Furia.
+- **dúvida, pergunta, sim:** Retorna uma resposta para ajudar o usuário com o que pode ser respondido pelo bot.
+- **roupa, vest..., camis..., moda, merchandise:** Retorna um link para a loja oficial da Furia.
+- **arm...:** Retorna as armas mais utilizadas pelos jogadores no CS.
 - **contato, whats, wpp:** Retorna o link para o WhatsApp oficial da Furia.
 - **quiz:** Dá inicio ao quiz com 3 perguntas aleatórias sobre a Furia.
 - **não, obrigado, valeu, ok, parar, nada, tchau:** Retorna uma despedida e agradecimento ao usuário.
+- **furios...**: Retorna o Modo Furioso.
 
 **Exemplo:**
 
@@ -54,11 +55,12 @@ O design do FuriaBOT foi projetado a partir das cores da logo da FURIA Esports. 
 ### Responsividade
 Pensando no conforto do usuário, o FuriaBOT possui dois layouts, sendo um para telas pequenas como celulares e outro para telas maiores como Tablets e Desktops. Conforme as imagens a seguir, a versão desktop/tablets traz um design clean, enquanto a versão mobile traz um visual dark.
 
-####
-
 <p align="center">
 <kbd><img src="./src/assets/screenshot_desktop.png" height="320"></kbd><kbd><img src="./src/assets/screenshot_mobile.png" height="320"></kbd>
 </p>
+
+### Modo Furioso
+No momento em que o usuário envia algo contendo a palavra **"furioso"**, o sistema muda a estética da interface, surpreendendo-o com um ambiente divertido. **Vale a pena testar!**
 
 ## Como rodar localmente
 

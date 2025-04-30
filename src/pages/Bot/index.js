@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/furia_whitelogo.png';
-import botface from '../../assets/furia_botface.png';
+
+import '../../styles/furioso.css';
 import '../../styles/bot.css';
 
 export default function Bot(){
@@ -14,7 +15,7 @@ export default function Bot(){
     const[userInput, setUserInput] = useState('');
     const[chatHistory, setChatHistory] = useState([
         { from: 'bot', text: 'Eai, furioso(a)! Tudo na paz?'},
-        {from: 'bot', text: 'Qual é a boa de hoje? Tem alguma dúvida, quer fazer um Quiz ou vamos bangar o modo FURIOSÍSSIMO?'}]);
+        {from: 'bot', text: 'Qual é a boa de hoje? Tem alguma dúvida, quer fazer um Quiz ou vamos bangar o Modo Furioso?'}]);
 
     const[inputSent, setInputSent] = useState(false);
 
@@ -23,6 +24,9 @@ export default function Bot(){
     const[remainingQuestions, setRemainingQuestions] = useState([]);
 
     const[score, setScore] = useState(0);
+
+    const [furiousMode, setFuriousMode] = useState(false);
+    const [furiousSteps, setFuriousSteps] = useState(0);
 
     const endOfMessagesRef = useRef(null);
 
@@ -67,7 +71,7 @@ export default function Bot(){
         // Comandos aceitos pelo chatbot
         const options = [
             {
-                option: ['oi', 'tudo bem', 'ola'],
+                option: ['oi', 'tudo bem', 'ola', 'olá'],
                 answer: 'Tudo bem, guerreiro(a)? Espero que esteja tendo um bom dia como eu! Em que posso te ajudar hoje?',
             },
             {
@@ -75,21 +79,25 @@ export default function Bot(){
                 answer: 'Que bom que está na paz de um jogo vencido! Em que posso te ajudar hoje?',
             },
             {
+                option: ['beleza', 'ok'],
+                answer: 'Precisa de ajuda em algo mais, guerreiro(a)?'
+            },
+            {
                 option: ['jog', 'quando', 'onde', 'dropa'],
                 answer: 'Para encontrar informações de jogos e jogadores: ',
                 link: 'https://draft5.gg/equipe/330-FURIA',
             },
             {
-                option: ['noticia', 'informa'],
+                option: ['noticia', 'notícia', 'informa'],
                 answer: 'Para encontrar mais informações e notícias sobre a FURIA:',
                 link: 'https://themove.gg/esports/cs',
             },
             {
-                option: ['duvida', 'pergunta', 'sim'],
+                option: ['duvida', 'dúvida', 'pergunta', 'sim', 'ajuda', 'furia'],
                 answer: 'Me fala qual a sua dúvida, estarei tentando te ajudar da melhor forma que consigo. Se quer saber mais sobre os jogos ou jogadores, me manda um "dropa".',
             },
             {
-                option: ['nao', 'não', 'obrigad', 'valeu', 'ok', 'parar', 'nada', 'tchau'],
+                option: ['nao', 'não', 'obrigad', 'valeu', 'parar', 'nada', 'tchau'],
                 answer: 'Valeu por passar aqui pra falar comigo, qualquer outra dúvida é so chamar!',
             },
             {
@@ -109,6 +117,10 @@ export default function Bot(){
                 option: ['contato', 'whats', 'wpp'],
                 answer: 'Opa! Se quiser entrar em contato ou saber mais sobre a FURIA, é só dar um oi lá no WhatsApp! Te espero lá ein guerreiro(a)!',
                 link: 'https://wa.me/5511993404466'
+            },
+            {
+                option: ['furios'],
+                answer: 'Você fez a melhor escolha! O Modo Furioso foi ativado!! Se quiser voltar ao modo normal, é só dizer "desativar", beleza?'
             },
         ];
 
@@ -134,6 +146,15 @@ export default function Bot(){
                 question: 'Me fala o nome de um jogador da FURIA',
                 answer: ['molodoy', 'yekindar', 'fallen', 'falen', 'kscerato', 'yuurih', 'skullz', 'chelo']
             }
+        ]
+
+        const furious = [
+            'VAMO FURIAAAAAA!',
+            'Jogar bonito é fácil, quero ver jogar com FURIAAAA!',
+            'Na FURIA não existe adversário não. Só presa.',
+            'Smoke, flash e, quando você menos espera, uma fera te encontra!',
+            'Não é questão de sorte, é questão de tática!',
+            'Porque um time é um time, mas a FURIA é uma legião deixando um legado!'
         ]
 
 
@@ -190,6 +211,25 @@ export default function Bot(){
                     return;
                     
                 }
+
+                else if(o.option.includes('furios')){
+                    setFuriousMode(true);
+                    setFuriousSteps(1);
+                    setUserInput('');
+                    
+                    const chosenFuriousMessage = furious[Math.floor(Math.random() * furious.length)];
+
+                    const updateMessage = [...sentMessages, {from: 'bot', text: chosenFuriousMessage, isFurious: true}];
+
+                    setChatHistory(updateMessage);
+
+                    await wait(500);
+
+                    setChatHistory([...updateMessage, {from: 'bot', text: response}]);
+
+                    return;
+                }
+
                 break;
             }
         }
@@ -268,21 +308,48 @@ export default function Bot(){
             }
             return;
         }
+
+        if(furiousMode && userInput.toLowerCase().includes('desativar')){
+            setFuriousMode(false);
+            setFuriousSteps(0);
+            setChatHistory([...chatHistory,
+                {from: 'user', text: userInput},
+                {from: 'bot', text: 'Ok, dropando Modo Furioso! Se quiser reativá-lo é só dizer "furioso"'}
+            ]);
+            setUserInput('');
+            return;
+        }
+
         
         setInputSent(true);
         await wait(450);
         setInputSent(false);
         setUserInput('');
 
-        setChatHistory(sentMessages);
-        await wait(850);
-        setChatHistory([...sentMessages, { from: 'bot', text: response, ...(link && { link }) }]);
+        let updatedMessages = [...sentMessages];
+
+        if(furiousMode){
+
+            const chosenFuriousMessage = furious[Math.floor(Math.random() * furious.length)];
+            updatedMessages.push({from: 'bot', text: chosenFuriousMessage, isFurious: true});
+
+            setFuriousSteps(prev => prev + 1);
+
+            setChatHistory(updatedMessages);
+            await wait(500);
+
+            updatedMessages.push({from: 'bot', text: response, ...(link && { link }) });
+            setChatHistory([...updatedMessages])
+        } else {
+            updatedMessages.push({from: 'bot', text: response, ...(link && { link }) });
+            setChatHistory(updatedMessages)
+        }
     }
 
 
 
     return(
-        <div className="container">
+        <div className={`container ${furiousMode ? 'furioso' : ''}`}>
             <div className="box-title">
                 <div className="title">
                     <img src={logo} className="logo"></img>
@@ -294,7 +361,11 @@ export default function Bot(){
                 {chatHistory.map((mensagem, index) => (
                     <div 
                         key={index}
-                        className={`message ${mensagem.from === 'bot' ? 'bot' : 'user'} ${mensagem.status === 'success' ? 'success' : ''} ${mensagem.status === 'error' ? 'error' : ''}`} 
+                        className={`message 
+                            ${mensagem.from === 'bot' ? 'bot' : 'user'} ${mensagem.status === 'success' ? 'success' : ''} 
+                            ${mensagem.status === 'error' ? 'error' : ''}
+                            ${mensagem.isFurious ? 'fanatic' : ''}
+                            `} 
                     >
                         <strong>{mensagem.from === 'bot' ? 'FuriaBOT: ' : 'VOCÊ: '}</strong>
                         {mensagem.link ? (
@@ -341,7 +412,7 @@ export default function Bot(){
                 <strong>quiz?</strong>
                 <p>vou lançar algumas perguntas, acha que consegue responder corretamente?</p>
 
-                <strong>modo FURIOSÍSSIMO 🔥</strong>
+                <strong>Modo Furioso 🔥</strong>
                 <p>você não está preparado para o que irá ver!</p>
             </div>
             )}
