@@ -6,7 +6,7 @@ import './styles/mediaQueries.css';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/furiabot-web'>
         <RoutesApp/>
       </BrowserRouter>
     </div>
