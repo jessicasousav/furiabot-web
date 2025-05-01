@@ -38,7 +38,7 @@ export default function Bot(){
     // Verificando se o dispositivo é um celular
     useEffect(() => {
         const handleResize = () => {
-            const mobile = window.innerWidth <= 600;
+            const mobile = window.innerWidth <= 600 || window.innerHeight <= 600;
             setIsMobile(mobile);
             setShowInstructions(!mobile);
         }

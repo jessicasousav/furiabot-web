@@ -103,6 +103,8 @@
         width: 75vw;
         padding: 30px;
         height: 55vh;
+        overflow-y: auto;
+        scroll-behavior: smooth;
         border: 1px solid rgba(255, 255, 255, 0.400);
         & a{
             color: rgba(255, 255, 255, 0.774);
@@ -144,6 +146,7 @@
         padding: 0px 30px;
         margin: 1px 0px;
         & input {
+            font-size: 16px;
             width: 75vw;
             color: rgb(230, 230, 230);
         }
@@ -188,6 +191,10 @@
 
     .box-link:hover{
         background-color: rgb(65, 65, 65);
+    }
+
+    footer {
+        display: none;
     }
 }
 
@@ -246,12 +253,13 @@
 
     footer{
     & {
-        border-top: 1px solid rgba(146, 146, 146, 0.377);
+        display: none;
+        /*border-top: 1px solid rgba(146, 146, 146, 0.377);
         width: 100vw;
         color: rgba(146, 146, 146, 0.377);
         font-size: 13px;
         padding-top: 2px;
-        bottom: 2px;     
+        bottom: 2px;*/ 
         }
     }
 }
