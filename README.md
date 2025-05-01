@@ -84,7 +84,7 @@ Quando o usuário envia algo contendo a palavra **"furioso"**, o sistema ativa o
 
 ## Como acessar o deploy
 Acesse o projeto em:
-https://jessicasousav.github.io/furiabot
+https://jessicasousav.github.io/furiabot-web
 
 ## Autor
 
