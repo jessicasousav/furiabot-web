@@ -107,7 +107,7 @@
         background-color: rgb(22, 22, 22);
         width: 75vw;
         padding: 30px;
-        height: 55vh;
+        height: calc(100vh - 80px - 50px - 40px - 180px);
         overflow-y: auto;
         scroll-behavior: smooth;
         border: 1px solid rgba(255, 255, 255, 0.400);
