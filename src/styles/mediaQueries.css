@@ -77,7 +77,6 @@
 @media screen and (max-width: 600px), screen and (max-height: 600px) and (orientation: landscape) {
     html, body{
         height: 100vh;
-        overflow: hidden;
     }
 
     .container{
