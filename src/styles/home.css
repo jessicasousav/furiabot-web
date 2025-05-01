@@ -64,7 +64,7 @@
 
 .content-hi{
     display: flex;
-    justify-self: center;
+    justify-content: center;
 }
 
 .content-messages{
