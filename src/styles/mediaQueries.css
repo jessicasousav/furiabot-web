@@ -82,6 +82,7 @@
 
     .container{
         background-color: rgb(12, 12, 12);
+        overflow: hidden;
     }
     .box-title{
         & {
