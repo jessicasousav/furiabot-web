@@ -39,7 +39,7 @@
         }
     }
 
-    footer{
+    .footer{
         display: none;
     }
 }
@@ -75,22 +75,27 @@
 
 /* CHATBOT */
 @media screen and (max-width: 600px), screen and (max-height: 600px) and (orientation: landscape) {
-    html, body{
-        height: 100vh;
-        overflow: hidden;
-    }
 
+    html, body, #root {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+    }
+    
     .container{
         background-color: rgb(12, 12, 12);
-        overflow: hidden;
+        position: relative;
+        padding-top: 50px;
     }
     .box-title{
         & {
         background-color: rgb(22, 22, 22);
         height: 7ch;
-        width: 75vw;
+        width: 80vw;
         border-radius: 15px 15px 0px 0px;
         border: 1px solid rgba(255, 255, 255, 0.400);
+        flex-shrink: 0;
         }
         & .title{
             height: 2.7ch;
@@ -107,9 +112,9 @@
 
     .box-chat{
         background-color: rgb(22, 22, 22);
-        width: 75vw;
+        width: 80vw;
         padding: 30px;
-        height: calc(100vh - 80px - 50px - 40px - 230px);
+        height: 65dvh;
         overflow-y: auto;
         scroll-behavior: smooth;
         border: 1px solid rgba(255, 255, 255, 0.400);
@@ -148,18 +153,20 @@
     .box-user{
         border: 1px solid rgba(255, 255, 255, 0.400);
         border-radius: 0px 0px 15px 15px;
-        width: 75vw;
+        width: 80vw;
         background-color: rgb(22, 22, 22);
-        padding: 0px 30px;
+        padding: 0px 5px;
         margin: 1px 0px;
+        height: 5.5ch;
         & input {
             font-size: 16px;
             width: 75vw;
             color: rgb(230, 230, 230);
         }
         & button{
+            flex-shrink: 0;
             height: 35px;
-            width: 40px;
+            width: 35px;
             background-color: rgb(230, 230, 230);
             color: rgb(22, 22, 22);
         }
@@ -173,18 +180,18 @@
         background-color: transparent;
         border: none;
         color: rgb(230, 230, 230);
-        margin-top: 15px;
-        margin-bottom: 0;
+        padding-top: 15px;
+        margin: 0 auto;
     }
 
     .box-info{
         background-color: white;
-        position: absolute;
-        bottom: 200px;
+        position: static;
     }
 
     .box-back{
         position: absolute;
+        margin-bottom: 0;
         top: 2px;
         cursor: pointer;
         & .box-link{
@@ -201,7 +208,7 @@
         background-color: rgb(65, 65, 65);
     }
 
-    footer {
+    .footer {
         display: none;
     }
 }
@@ -243,7 +250,7 @@
 
     /* CHATBOT */
     .box-chat{
-        height: 20vh;
+        height: 35vh;
     }
 
     .box-user{
@@ -259,7 +266,8 @@
         left: 7px;
     }
 
-    footer{
+
+    .footer{
     & {
         display: none;
         /*border-top: 1px solid rgba(146, 146, 146, 0.377);

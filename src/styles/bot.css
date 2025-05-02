@@ -12,18 +12,9 @@
     background-color: rgb(31, 31, 31);
 }
 
-html, body{
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
 *{
     margin: 0;
     padding: 0;
-}
-
-*, *::before, *::after{
     box-sizing: border-box;
 }
 
@@ -32,9 +23,8 @@ html, body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
-    overflow: hidden;
 }
 
 .box-title{
@@ -44,7 +34,6 @@ html, body{
     align-items: center;
     border: 1px solid rgba(82, 82, 82, 0.315);
     background-color: rgb(31, 31, 31);
-    flex-shrink: 0;
     height: 10ch;
     width: 70vw;
     padding: 0px 30px;
@@ -78,8 +67,7 @@ html, body{
     & {
     display: flex;
     flex-direction: column;
-    height: 40vh;
-    min-height: 0;
+    height: 45vh;
     overflow-y: auto;
     scroll-behavior: smooth;
     width: 70vw;
@@ -154,13 +142,12 @@ html, body{
 .box-user{
     & {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         border: 1px solid rgba(218, 218, 218, 0.562);
-        flex-shrink: 0;
-        height: 5ch;
+        height: auto;
         width: 70vw;
-        padding: 0 18px 0 40px;
+        padding: 10px 20px;
         border-radius: 0px;
         margin: 3px 0px;
         font-family: Arial, Helvetica, sans-serif;
@@ -231,7 +218,6 @@ html, body{
         padding: 2px 30px;
         border-radius: 20px;
         margin-top: 10px;
-        flex-shrink: 0;
     }
     & strong {
         margin-top: 10px;
@@ -267,10 +253,17 @@ html, body{
     background-color: rgb(31, 31, 31);
 }
 
-footer{
+.footer{
     & {
+        padding-top: 5px;
+        text-align: center;
+        width: 100vw;
+        border-top: 1px solid rgba(197, 197, 197, 0.342);
         position: absolute;
         bottom: 10px;        
+    }
+    & p{
+        color: rgb(197, 197, 197);
     }
     & a{
         text-decoration: none;

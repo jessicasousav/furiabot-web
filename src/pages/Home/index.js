@@ -40,9 +40,9 @@ export default function Home(){
                 </div>
             </div>
 
-            <footer>
-                <div>© 2025 FuriaBOT. Criado por <a href="https://linkedin.com/in/jessica-sousa-vieira" target="blank"> Jéssica de Sousa Vieira </a> para teste da FURIA ESPORTS.</div>
-            </footer>
+            <div className="footer">
+                <p>© 2025 FuriaBOT. Criado por <a href="https://linkedin.com/in/jessica-sousa-vieira" target="blank"> Jéssica de Sousa Vieira </a> para teste da FURIA ESPORTS.</p>
+            </div>
         </div>
     )
 }

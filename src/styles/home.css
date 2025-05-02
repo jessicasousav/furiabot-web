@@ -121,18 +121,6 @@ html,body{
     }
 }
 
-footer{
-    & {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10px;
-        border-top: 1px solid rgb(207, 207, 207);
-        width: 100vw;
-        color: rgb(146, 146, 146);
-    }
-}
-
 @keyframes typing {
     from {
         width: 0;

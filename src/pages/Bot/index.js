@@ -32,7 +32,7 @@ export default function Bot(){
 
     // Focando chat sempre na última mensagem enviada
     useEffect(() => {
-        endOfMessagesRef.current?.scrollIntoView();
+        endOfMessagesRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chatHistory])
 
     // Verificando se o dispositivo é um celular
@@ -420,9 +420,9 @@ export default function Bot(){
                 <Link className='box-link' to='/'><span class="material-symbols-outlined">arrow_back</span></Link>
             </div>
 
-            <footer>
-                <div>© 2025 FuriaBOT. Criado por <a href="https://linkedin.com/in/jessica-sousa-vieira" target="blank"> Jéssica de Sousa Vieira </a> para teste da FURIA ESPORTS.</div>
-            </footer>
+            <div className="footer">
+                <p>© 2025 FuriaBOT. Criado por <a href="https://linkedin.com/in/jessica-sousa-vieira" target="blank"> Jéssica de Sousa Vieira </a> para teste da FURIA ESPORTS.</p>
+            </div>
         </div>
     )
 }
