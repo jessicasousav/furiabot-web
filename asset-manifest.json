@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/furiabot-web/static/css/main.a7a67bf9.css",
-    "main.js": "/furiabot-web/static/js/main.094f7299.js",
+    "main.css": "/furiabot-web/static/css/main.08d35ef2.css",
+    "main.js": "/furiabot-web/static/js/main.4e0f4217.js",
     "static/media/furia_botface.png": "/furiabot-web/static/media/furia_botface.686242b267aa05077559.png",
     "static/media/furia_whitelogo.png": "/furiabot-web/static/media/furia_whitelogo.a5b2896fc26ed8fadf13.png",
     "index.html": "/furiabot-web/index.html",
-    "main.a7a67bf9.css.map": "/furiabot-web/static/css/main.a7a67bf9.css.map",
-    "main.094f7299.js.map": "/furiabot-web/static/js/main.094f7299.js.map"
+    "main.08d35ef2.css.map": "/furiabot-web/static/css/main.08d35ef2.css.map",
+    "main.4e0f4217.js.map": "/furiabot-web/static/js/main.4e0f4217.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7a67bf9.css",
-    "static/js/main.094f7299.js"
+    "static/css/main.08d35ef2.css",
+    "static/js/main.4e0f4217.js"
   ]
 }
