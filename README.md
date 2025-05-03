@@ -1,6 +1,6 @@
 # FuriaBOT
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jessicasousav/Furiabot-web/blob/main/LICENSE)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jessicasousav/furiabot-web/blob/main/LICENSE)
 
 FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos fãs da equipe de CS da **FURIA Esports**. Com uma interface moderna e inspirada na identidade visual da FURIA, o bot proporciona interações divertidas, quiz temático e informações sobre o time e a marca.
 
