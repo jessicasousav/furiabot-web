@@ -85,7 +85,7 @@ export default function Bot(){
                 answer: 'Show! Precisa de ajuda com mais alguma coisa, guerreiro(a)?'
             },
             {
-                option: ['jog', 'quando', 'onde', 'dropa'],
+                option: ['jog', 'quando', 'dropa'],
                 answer: 'Quer saber sobre os jogos e jogadores da FURIA? Dá uma olhada aqui: ',
                 link: 'https://draft5.gg/equipe/330-FURIA',
             },
@@ -95,7 +95,7 @@ export default function Bot(){
                 link: 'https://themove.gg/esports/cs',
             },
             {
-                option: ['duvida', 'dúvida', 'pergunta', 'sim', 'ajuda'],
+                option: ['duvida', 'dúvida', 'pergunta', 'sim'],
                 answer: 'Manda aí sua dúvida! Vou tentar ajudar da melhor forma possível. Se quiser saber mais sobre os jogos ou jogadores, é só mandar um "dropa".',
             },
             {
@@ -415,7 +415,7 @@ export default function Bot(){
                                 <div>
                                     <a
                                     href={mensagem.link}
-                                    target="blank">
+                                    target="_blank">
                                         clique aqui
                                     </a>
                                 </div>

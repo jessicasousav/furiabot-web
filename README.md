@@ -1,6 +1,6 @@
 # FuriaBOT
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jessicasousav/Moovy/blob/main/LICENSE)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jessicasousav/Furiabot-web/blob/main/LICENSE)
 
 FuriaBOT é um chatbot interativo criado para um teste técnico e destinado aos fãs da equipe de CS da **FURIA Esports**. Com uma interface moderna e inspirada na identidade visual da FURIA, o bot proporciona interações divertidas, quiz temático e informações sobre o time e a marca.
 
@@ -27,13 +27,13 @@ Com o sistema de ativação por palavras-chave, o usuário pode escrever frases 
 **Palavras de ativação:**
 - **oi, tudo bem, olá:** Retorna uma saudação ao usuário.
 - **paz, estou bem:** Retorna uma resposta à saudação do usuário.
-- **jogo, quando, onde, dropa:**
+- **jogo, quando, dropa:**
 Retorna um link com informações sobre jogos da Furia.
 - **notícia, informa...:** Retorna um link com notícias atualizadas sobre a Furia.
 - **dúvida, pergunta, sim:** Retorna sugestões de perguntas ao bot.
 - **roupa, vest..., camis..., moda, merchandise:** Retorna um link para a loja oficial.
 - **arm...:** Retorna as armas populares pelos jogadores no CS.
-- **contato, whats, wpp:** Retorna o link para o WhatsApp oficial da Furia.
+- **contato, whats, wpp, furia:** Retorna o link para o WhatsApp oficial da Furia.
 - **quiz:** Dá inicio ao quiz com 3 perguntas aleatórias sobre a Furia.
 - **não, obrigado, valeu, ok, parar, nada, tchau:** Retorna uma despedida ao usuário.
 - **furios...**: Ativa o *Modo Furioso* com estética diferenciada.
@@ -60,7 +60,7 @@ Pensando no conforto do usuário, o FuriaBOT possui dois layouts: um para dispos
 </p>
 
 ### Modo Furioso
-Quando o usuário envia algo contendo a palavra **"furioso"**, o sistema ativa o *Modo Furioso*, alterando a estética da interface e criando uma experiência visual divertida. **Vale a pena testar!**
+Quando o usuário envia algo contendo a palavra **"furioso"**, o sistema ativa o *Modo Furioso*, alterando a estética da interface e criando uma experiência visual divertida e elegante. **Vale a pena testar!**
 
 ## Como rodar localmente
 
