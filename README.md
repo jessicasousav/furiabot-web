@@ -62,6 +62,9 @@ Pensando no conforto do usuário, o FuriaBOT possui dois layouts: um para dispos
 ### Modo Furioso
 Quando o usuário envia algo contendo a palavra **"furioso"**, o sistema ativa o *Modo Furioso*, alterando a estética da interface e criando uma experiência visual divertida e elegante. **Vale a pena testar!**
 
+### Demonstração
+No link a seguir, há uma demonstração de como o FuriaBOT funciona. Para assistir, [clique aqui](https://drive.google.com/file/d/1CaOWzExwGCDUok31HF3osjleqUheFUik/view?usp=drive_link).
+
 ## Como rodar localmente
 
 1. Clone o repositorio:
