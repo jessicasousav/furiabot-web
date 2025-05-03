@@ -12,6 +12,7 @@
             color: rgb(0, 0, 0);
         }
     }
+    
 
     .message{
         &.bot{
@@ -35,8 +36,18 @@
         }
     }
 
+    #typing{
+        color: #bfa14c;
+    }
+
     .box-info{
+        &{
+        background-color: rgba(238, 238, 238, 0.212);
         color: rgba(218, 218, 218, 0.521);
+        }
+        & .info-tip{
+            color: #bfa14c;
+        }
     }
 
     .box-user{
@@ -62,5 +73,17 @@
     }
     100% {
         background-position: 100% 50%;
+    }
+}
+
+@keyframes blink {
+    0%{
+        content: '.';
+    }
+    50%{
+        content: '..';
+    }
+    100%{
+        content: '...';
     }
 }

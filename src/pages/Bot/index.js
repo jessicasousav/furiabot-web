@@ -1,4 +1,4 @@
-import React, { use, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
@@ -16,6 +16,8 @@ export default function Bot(){
     const[chatHistory, setChatHistory] = useState([
         { from: 'bot', text: 'Eai, furioso(a)! Tudo na paz?'},
         {from: 'bot', text: 'Qual é a boa de hoje? Tem alguma dúvida, quer fazer um Quiz ou vamos bangar o Modo Furioso?'}]);
+
+    const[isTyping, setIsTyping] = useState(false);
 
     const[inputSent, setInputSent] = useState(false);
 
@@ -93,7 +95,7 @@ export default function Bot(){
                 link: 'https://themove.gg/esports/cs',
             },
             {
-                option: ['duvida', 'dúvida', 'pergunta', 'sim', 'ajuda', 'furia'],
+                option: ['duvida', 'dúvida', 'pergunta', 'sim', 'ajuda'],
                 answer: 'Manda aí sua dúvida! Vou tentar ajudar da melhor forma possível. Se quiser saber mais sobre os jogos ou jogadores, é só mandar um "dropa".',
             },
             {
@@ -114,7 +116,7 @@ export default function Bot(){
                 answer: 'Fechado! Bora pro quiz! Serão 3 perguntas sobre a FURIA. Se quiser parar, é só dizer "parar". Preparado(a)?',
             },
             {
-                option: ['contato', 'whats', 'wpp'],
+                option: ['contato', 'whats', 'wpp', 'furia'],
                 answer: 'Se quiser falar com a FURIA ou saber mais, manda um oi no WhatsApp! Te espero lá, guerreiro(a)!',
                 link: 'https://wa.me/5511993404466'
             },
@@ -185,16 +187,21 @@ export default function Bot(){
                     setCurrentQuestion(chosenQuestions[0]);
                     setQuizActive(true);
 
-                    setInputSent(true);
-                    await wait(450);
-                    setInputSent(false);
+                    setChatHistory([...sentMessages])
                     setUserInput('');
+
+                    await wait(450)
+                    setInputSent(true);
+                    setIsTyping(true);
+                    await wait(800);
+                    setInputSent(false);
+                    setIsTyping(false);
 
                     // introduzindo o quiz para o usuário
                     const introQuiz = [...sentMessages, { from: 'bot', text: response }];
                     setChatHistory(introQuiz);
 
-                    await wait(2000);
+                    await wait(1200);
 
                     // contagem regressiva para inicio do quiz
                     let countdownMessages = [...introQuiz]
@@ -215,15 +222,18 @@ export default function Bot(){
                 else if(o.option.includes('furios')){
                     setFuriousMode(true);
                     setFuriousSteps(1);
-                    setUserInput('');
                     
                     const chosenFuriousMessage = furious[Math.floor(Math.random() * furious.length)];
 
                     const updateMessage = [...sentMessages, {from: 'bot', text: chosenFuriousMessage, isFurious: true}];
 
                     setChatHistory(updateMessage);
+                    setUserInput('')
 
-                    await wait(500);
+                    await wait(500)
+                    setIsTyping(true);
+                    await wait(800);
+                    setIsTyping(false);
 
                     setChatHistory([...updateMessage, {from: 'bot', text: response}]);
 
@@ -241,12 +251,19 @@ export default function Bot(){
             setRemainingQuestions([]);
             setScore(0);
 
+            setChatHistory([...sentMessages]);
+            setUserInput('');
+
+            await wait(450);
+            setIsTyping(true);
+            await wait(800);
+            setIsTyping(false);
+
             // mensagem para avisar ao usuário que o quiz foi interrompido com sucesso
             const stopQuiz = [...chatHistory,
                 { from: 'user', text: userInput},
                 { from: 'bot', text: 'Tranquilo, o quiz foi interrompido! Se quiser jogar de novo, é só mandar um "quiz".'}
             ]
-            setUserInput('');
             setChatHistory(stopQuiz);
             return;
         }
@@ -301,7 +318,11 @@ export default function Bot(){
 
                 
                 setChatHistory(finalQuiz);
-                await wait(1500);
+                await wait(450);
+                setIsTyping(true);
+                await wait(800);
+                setIsTyping(false);
+
                 setChatHistory([...finalQuiz, { from: 'bot', text: 'Parabéns! O que mais gostaria de fazer agora?'}]);
                 
                 setScore(0);
@@ -310,13 +331,21 @@ export default function Bot(){
         }
 
         if(furiousMode && userInput.toLowerCase().includes('desativar')){
+
+            setChatHistory([...sentMessages]);
+            setUserInput('');
+
+            await wait(450);
+            setIsTyping(true);
+            await wait(800)
+            setIsTyping(false);
+            
             setFuriousMode(false);
             setFuriousSteps(0);
             setChatHistory([...chatHistory,
                 {from: 'user', text: userInput},
                 {from: 'bot', text: 'Ok, Modo Furioso desativado! Se quiser ativar de novo, é só mandar um "furioso"'}
             ]);
-            setUserInput('');
             return;
         }
 
@@ -324,7 +353,19 @@ export default function Bot(){
         setInputSent(true);
         await wait(450);
         setInputSent(false);
+
+        setChatHistory([...sentMessages]);
+
         setUserInput('');
+
+        await wait(450);
+        setIsTyping(true);
+        await wait(800);
+        setIsTyping(false);
+
+        const chatResponse = [...chatHistory, {from: 'bot', text: response, ...(link && {link}) }];
+
+        setChatHistory([...chatResponse])
 
         let updatedMessages = [...sentMessages];
 
@@ -385,6 +426,17 @@ export default function Bot(){
 
                     </div>
                 ))}
+
+
+                {isTyping && (
+                    <div className="typing-container">
+                        <div className="typing" id="typing">
+                                <span>FuriaBOT está digitando</span>
+                                
+                        </div>
+                    </div>
+                )}
+                    
                 <div ref={endOfMessagesRef} />
             </div>
 
@@ -393,7 +445,7 @@ export default function Bot(){
                     type="text"
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
-                    placeholder="Digite o que se passa na sua mente..."
+                    placeholder="Digite algo para o FuriaBOT..."
                     onKeyDown={(e) => {if (e.key === 'Enter'){handleSubmit()}}}
                 />
 
@@ -406,14 +458,18 @@ export default function Bot(){
 
             {showInstructions && (
                 <div className="box-info" id="helpItens">
-                <strong>dúvida?</strong>
-                <p>me pergunte algo, darei o meu máximo para ajudar</p>
+                <strong>Dúvida?</strong>
+                <p>Me pergunte algo, darei o meu máximo para ajudar.</p>
 
-                <strong>quiz?</strong>
-                <p>vou lançar algumas perguntas, acha que consegue responder corretamente?</p>
+                <strong>Quiz?</strong>
+                <p>Vou lançar algumas perguntas, acha que consegue responder corretamente? 
+                    <br/><span className="info-tip"> Para finalizar, digite: <strong>"parar".</strong></span>
+                </p>
 
                 <strong>Modo Furioso 🔥</strong>
-                <p>você não está preparado para o que irá ver!</p>
+                <p>Você não está preparado para o que irá ver!
+                <br/><span className="info-tip"> Para finalizar, digite: <strong>"desativar".</strong></span>
+                </p>
             </div>
             )}
             <div className='box-back'>

@@ -139,6 +139,49 @@
     }
 }
 
+.typing-container{
+    &{
+        position: absolute;
+        height: 41vh;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    & #typing{
+        &{ 
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;   
+            color: rgba(82, 82, 82, 0.486);
+        }
+    
+    & span::after{
+        content: '';
+        animation: blink 1s steps(4, end) infinite;
+    }
+    }
+}
+
+@keyframes blink {
+    0%{
+        content: '';
+    }
+    25% {
+        content: '.';
+    }
+    50%{
+        content: '..';
+    }
+    75%{
+        content: '...';
+    }
+    100%{
+        content: '';
+    }
+}
+
 .box-user{
     & {
         display: flex;
@@ -208,6 +251,7 @@
     & {
         display: flex;
         flex-direction: column;
+        text-align: center;
         background-color: rgba(238, 238, 238, 0.212);
         align-items: center;
         color: rgba(46, 46, 46, 0.822);
@@ -221,6 +265,9 @@
     }
     & strong {
         margin-top: 10px;
+    }
+    & .info-tip{
+        color: rgba(46, 46, 46, 0.822);
     }
 }
 
